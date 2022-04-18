@@ -44,7 +44,7 @@ def index():
         txt1 = html_form.text1.data
         txt2 = html_form.text2.data
         cursor = mysql.connection.cursor()
-        query = f"SELECT coordinates FROM airport.airport_codes where iata_code='{txt1}' or iata_code='{txt2}'  "
+        query = f"SELECT coordinates FROM airport.airport_codes where iata_code='{txt1}' or iata_code='{txt2}' "
         cursor.execute(query)
         rows = []
         for data in cursor:
