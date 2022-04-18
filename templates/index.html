@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+{% from "includes/formhelpers.html" import render_field %}
+
+<h1>Calculate</h1>
+
+<div>
+
+
+    {% for item in session.pop('my_list',[]) %}
+    <h1>{{item}} => KM</h1>
+    {% endfor %}
+
+
+    <form method="post">
+        {{render_field(form.text1)}}
+        {{render_field(form.text2)}}
+        <button class="btn btn-primary" type="submit">Calculate</button>
+    </form>
+
+</div>
+
+
+
+
+
+{% endblock %}
